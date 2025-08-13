@@ -15,11 +15,12 @@
             <div class="logo">
                 <span class="logo-hewi">Hewi</span><span class="logo-site">Site</span>
             </div>
-            <p class="tagline">Лучшие кряки читов</p>
+            <p class="tagline">Лучшие читы для профессионалов</p>
         </header>
         
         <main>
             <div class="cheats-list">
+                <!-- Старые читы -->
                 <div class="cheat-card">
                     <h2>Nix Project</h2>
                     <a href="https://go.linkify.ru/2A7Q" class="download-btn">Скачать</a>
@@ -30,6 +31,18 @@
                     <a href="https://go.linkify.ru/2A7O" class="download-btn">Скачать</a>
                 </div>
                 
+                <!-- Новые читы -->
+                <div class="cheat-card">
+                    <h2>Nursultan Nextgen</h2>
+                    <a href="https://go.linkify.ru/2A9k" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>WexSide Client</h2>
+                    <a href="https://go.linkify.ru/2A9j" class="download-btn">Скачать</a>
+                </div>
+                
+                <!-- Остальные читы -->
                 <div class="cheat-card">
                     <h2>Venus Free</h2>
                     <a href="https://go.linkify.ru/2A7M" class="download-btn">Скачать</a>
@@ -66,6 +79,7 @@
             <p>HewiSite © 2023</p>
             <p class="disclaimer">Мы не несем ответственность за ваш ПК</p>
         </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -150,6 +164,18 @@
                 }
             },
             "retina_detect": true
+        });
+
+        // Мобильное меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            if (window.innerWidth <= 768) {
+                header.insertAdjacentHTML('afterbegin', '<div class="mobile-menu-btn">☰</div>');
+                const btn = document.querySelector('.mobile-menu-btn');
+                btn.addEventListener('click', function() {
+                    document.querySelector('.cheats-list').classList.toggle('mobile-show');
+                });
+            }
         });
     </script>
 </body>
