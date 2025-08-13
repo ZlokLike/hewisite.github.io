@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HewiSite | Лучшие читы</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="particles-js"></div>
@@ -20,7 +20,6 @@
         
         <main>
             <div class="cheats-list">
-                <!-- Старые читы -->
                 <div class="cheat-card">
                     <h2>Nix Project</h2>
                     <a href="https://go.linkify.ru/2A7Q" class="download-btn">Скачать</a>
@@ -31,18 +30,6 @@
                     <a href="https://go.linkify.ru/2A7O" class="download-btn">Скачать</a>
                 </div>
                 
-                <!-- Новые читы -->
-                <div class="cheat-card">
-                    <h2>Nursultan Nextgen</h2>
-                    <a href="https://go.linkify.ru/2A9k" class="download-btn">Скачать</a>
-                </div>
-                
-                <div class="cheat-card">
-                    <h2>WexSide Client</h2>
-                    <a href="https://go.linkify.ru/2A9j" class="download-btn">Скачать</a>
-                </div>
-                
-                <!-- Остальные читы -->
                 <div class="cheat-card">
                     <h2>Venus Free</h2>
                     <a href="https://go.linkify.ru/2A7M" class="download-btn">Скачать</a>
@@ -72,111 +59,27 @@
                     <h2>Expensive Upgrade</h2>
                     <a href="https://go.linkify.ru/2A5O" class="download-btn">Скачать</a>
                 </div>
+
+                <div class="cheat-card">
+                    <h2>Nursultan Nextgen</h2>
+                    <a href="https://go.linkify.ru/2A9k" class="download-btn">Скачать</a>
+                </div>
+
+                <div class="cheat-card">
+                    <h2>WexSide Client</h2>
+                    <a href="https://go.linkify.ru/2A9j" class="download-btn">Скачать</a>
+                </div>
             </div>
         </main>
         
         <footer>
+            <a href="https://www.youtube.com/@HewiMine" class="youtube-link" target="_blank">Мой YouTube</a>
             <p>HewiSite © 2023</p>
             <p class="disclaimer">Мы не несем ответственность за ваш ПК</p>
         </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#5e0000"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#3d0000",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-
-        // Мобильное меню
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            if (window.innerWidth <= 768) {
-                header.insertAdjacentHTML('afterbegin', '<div class="mobile-menu-btn">☰</div>');
-                const btn = document.querySelector('.mobile-menu-btn');
-                btn.addEventListener('click', function() {
-                    document.querySelector('.cheats-list').classList.toggle('mobile-show');
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
