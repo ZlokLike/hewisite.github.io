@@ -3,8 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HewiSite | Читы и Ресурспаки</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HewiSite | Лучшие кряки читов</title>
+    <style>
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            font-family: 'Ubuntu Mono', monospace;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(200, 0, 0, 0.8);
+        }
+        
+        .logo-hewi {
+            color: #d10000;
+            font-weight: 700;
+        }
+        
+        .logo-site {
+            color: #d0d0d0;
+            font-weight: 400;
+        }
+        
+        .tagline {
+            color: #a0a0a0;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cheats-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .cheat-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid #6d0000;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 150px;
+        }
+        
+        .cheat-card:hover {
+            transform: translateY(-7px);
+            border-color: #d10000;
+            box-shadow: 0 10px 30px rgba(200, 0, 0, 0.6);
+        }
+        
+        .cheat-card h2 {
+            color: #e0e0e0;
+            font-size: 1.6rem;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #d10000, #a00000);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 4px 10px rgba(200, 0, 0, 0.3);
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(to right, #a00000, #d10000);
+            box-shadow: 0 0 20px rgba(200, 0, 0, 0.7);
+            transform: scale(1.02);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #707070;
+            font-size: 1rem;
+            border-top: 1px solid #3d3d3d;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .youtube-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff3a3a;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid #6d0000;
+            margin-bottom: 15px;
+        }
+        
+        .youtube-link:hover {
+            background: rgba(50, 50, 50, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        .youtube-link img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #ff3a3a;
+            text-shadow: 0 0 3px rgba(255, 0, 0, 0.3);
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .cheats-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,109 +195,160 @@
             <div class="logo">
                 <span class="logo-hewi">Hewi</span><span class="logo-site">Site</span>
             </div>
-            <div class="nav-container">
-                <button class="nav-btn active" data-target="cheats">Читы</button>
-                <button class="nav-btn" data-target="resourcepacks">Ресурспаки</button>
-            </div>
+            <p class="tagline">Лучшие кряки читов</p>
         </header>
         
         <main>
-            <section id="cheats" class="content-section active-section">
-                <div class="section-square">
-                    <h2>Читы Майнкрафт</h2>
-                    <div class="items-grid">
-                        <div class="item-square">
-                            <h3>Nix Project</h3>
-                            <a href="https://go.linkify.ru/2A7Q" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Venus Free</h3>
-                            <a href="https://go.linkify.ru/2A7M" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Celestial</h3>
-                            <a href="https://go.linkify.ru/2A7K" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Minced 1.16.5</h3>
-                            <a href="https://go.linkify.ru/2A7P" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Haruka DLC</h3>
-                            <a href="https://go.linkify.ru/2A7N" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Catlavan Client</h3>
-                            <a href="https://go.linkify.ru/2AFO" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Expensive Upgrade</h3>
-                            <a href="https://go.linkify.ru/2A5O" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Nursultan Nextgen</h3>
-                            <a href="https://go.linkify.ru/2A9k" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>WexSide Client</h3>
-                            <a href="https://go.linkify.ru/2A9j" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>ThunderHack Recode 1.21</h3>
-                            <a href="https://go.linkify.ru/2A9q" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>NewCode Client</h3>
-                            <a href="https://go.linkify.ru/2A9u" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Excellent Upgrade</h3>
-                            <a href="https://go.linkify.ru/2A9y" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Verist Reborn</h3>
-                            <a href="https://go.linkify.ru/2ADa" class="dl-btn">Скачать</a>
-                        </div>
-                    </div>
+            <div class="cheats-list">
+                <div class="cheat-card">
+                    <h2>Nix Project</h2>
+                    <a href="https://go.linkify.ru/2A7Q" class="download-btn">Скачать</a>
                 </div>
-            </section>
+                
+                <div class="cheat-card">
+                    <h2>Venus Free</h2>
+                    <a href="https://go.linkify.ru/2A7M" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>Celestial</h2>
+                    <a href="https://go.linkify.ru/2A7K" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>Minced 1.16.5</h2>
+                    <a href="https://go.linkify.ru/2A7P" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>Haruka DLC</h2>
+                    <a href="https://go.linkify.ru/2A7N" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>Catlavan Client</h2>
+                    <a href="https://go.linkify.ru/2AFO" class="download-btn">Скачать</a>
+                </div>
+                
+                <div class="cheat-card">
+                    <h2>Expensive Upgrade</h2>
+                    <a href="https://go.linkify.ru/2A5O" class="download-btn">Скачать</a>
+                </div>
 
-            <section id="resourcepacks" class="content-section">
-                <div class="section-square">
-                    <h2>Ресурспаки Майнкрафт</h2>
-                    <div class="items-grid">
-                        <div class="item-square">
-                            <h3>Default Dark Mode</h3>
-                            <a href="#" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Faithful 32x</h3>
-                            <a href="#" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Modern HD</h3>
-                            <a href="#" class="dl-btn">Скачать</a>
-                        </div>
-                        <div class="item-square">
-                            <h3>Soartex Fanver</h3>
-                            <a href="#" class="dl-btn">Скачать</a>
-                        </div>
-                    </div>
+                <div class="cheat-card">
+                    <h2>Nursultan Nextgen</h2>
+                    <a href="https://go.linkify.ru/2A9k" class="download-btn">Скачать</a>
                 </div>
-            </section>
+
+                <div class="cheat-card">
+                    <h2>WexSide Client</h2>
+                    <a href="https://go.linkify.ru/2A9j" class="download-btn">Скачать</a>
+                </div>
+
+                <div class="cheat-card">
+                    <h2>ThunderHack Recode 1.21</h2>
+                    <a href="https://go.linkify.ru/2A9q" class="download-btn">Скачать</a>
+                </div>
+
+                <div class="cheat-card">
+                    <h2>NewCode Client</h2>
+                    <a href="https://go.linkify.ru/2A9u" class="download-btn">Скачать</a>
+                </div>
+
+                <div class="cheat-card">
+                    <h2>Excellent Upgrade</h2>
+                    <a href="https://go.linkify.ru/2A9y" class="download-btn">Скачать</a>
+                </div>
+
+                <div class="cheat-card">
+                    <h2>Verist Reborn</h2>
+                    <a href="https://go.linkify.ru/2ADa" class="download-btn">Скачать</a>
+                </div>
+            </div>
         </main>
         
         <footer>
-            <a href="https://www.youtube.com/@HewiMine" class="yt-link" target="_blank">
+            <a href="https://www.youtube.com/@HewiMine" class="youtube-link" target="_blank">
                 <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube">
                 <span>HewiMine</span>
             </a>
             <p>HewiSite © 2025</p>
-            <p class="warning">Мы не несем ответственность за ваш ПК</p>
+            <p class="disclaimer">Мы не несем ответственность за ваш ПК</p>
         </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // Защита от копирования
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            // Блокировка Ctrl+C, Ctrl+U, F12
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85) || e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+        
+        // Проверка реферера
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const allowedDomains = [
+                    'zloklike.github.io',
+                    'hewisite.github.io'
+                ];
+                
+                const referrer = document.referrer;
+                let isValid = false;
+                
+                for (const domain of allowedDomains) {
+                    if (referrer.includes(domain)) {
+                        isValid = true;
+                        break;
+                    }
+                }
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('Ссылки работают только при переходе с основного сайта!');
+                    window.location.href = 'https://zloklike.github.io/hewisite.github.io/';
+                }
+            });
+        });
+        
+        // Инициализация частиц
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#5e0000" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#3d0000",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
