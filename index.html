@@ -1,143 +1,123 @@
-// Инициализация частиц
-document.addEventListener('DOMContentLoaded', function() {
-    particlesJS("particles-js", {
-        particles: {
-            number: { 
-                value: 100, 
-                density: { 
-                    enable: true, 
-                    value_area: 800 
-                } 
-            },
-            color: { 
-                value: "#d10000" 
-            },
-            shape: { 
-                type: "circle" 
-            },
-            opacity: { 
-                value: 0.5, 
-                random: true 
-            },
-            size: { 
-                value: 3, 
-                random: true 
-            },
-            line_linked: { 
-                enable: true, 
-                distance: 150, 
-                color: "#d10000", 
-                opacity: 0.4, 
-                width: 1 
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: true,
-                out_mode: "out"
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { 
-                    enable: true, 
-                    mode: "repulse" 
-                },
-                onclick: { 
-                    enable: true, 
-                    mode: "push" 
-                }
-            }
-        }
-    });
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HewiSite | Читы и Ресурспаки</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-hewi">Hewi</span><span class="logo-site">Site</span>
+            </div>
+            <div class="nav-container">
+                <button class="nav-btn active" data-target="cheats">Читы</button>
+                <button class="nav-btn" data-target="resourcepacks">Ресурспаки</button>
+            </div>
+        </header>
+        
+        <main>
+            <section id="cheats" class="content-section active-section">
+                <div class="section-square">
+                    <h2>Читы Майнкрафт</h2>
+                    <div class="items-grid">
+                        <div class="item-square">
+                            <h3>Nix Project</h3>
+                            <a href="https://go.linkify.ru/2A7Q" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Venus Free</h3>
+                            <a href="https://go.linkify.ru/2A7M" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Celestial</h3>
+                            <a href="https://go.linkify.ru/2A7K" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Minced 1.16.5</h3>
+                            <a href="https://go.linkify.ru/2A7P" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Haruka DLC</h3>
+                            <a href="https://go.linkify.ru/2A7N" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Catlavan Client</h3>
+                            <a href="https://go.linkify.ru/2AFO" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Expensive Upgrade</h3>
+                            <a href="https://go.linkify.ru/2A5O" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Nursultan Nextgen</h3>
+                            <a href="https://go.linkify.ru/2A9k" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>WexSide Client</h3>
+                            <a href="https://go.linkify.ru/2A9j" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>ThunderHack Recode 1.21</h3>
+                            <a href="https://go.linkify.ru/2A9q" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>NewCode Client</h3>
+                            <a href="https://go.linkify.ru/2A9u" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Excellent Upgrade</h3>
+                            <a href="https://go.linkify.ru/2A9y" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Verist Reborn</h3>
+                            <a href="https://go.linkify.ru/2ADa" class="dl-btn">Скачать</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    // Переключение разделов
-    const navButtons = document.querySelectorAll('.nav-btn');
-    const sections = document.querySelectorAll('.content-section');
+            <section id="resourcepacks" class="content-section">
+                <div class="section-square">
+                    <h2>Ресурспаки Майнкрафт</h2>
+                    <div class="items-grid">
+                        <div class="item-square">
+                            <h3>Default Dark Mode</h3>
+                            <a href="#" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Faithful 32x</h3>
+                            <a href="#" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Modern HD</h3>
+                            <a href="#" class="dl-btn">Скачать</a>
+                        </div>
+                        <div class="item-square">
+                            <h3>Soartex Fanver</h3>
+                            <a href="#" class="dl-btn">Скачать</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <a href="https://www.youtube.com/@HewiMine" class="yt-link" target="_blank">
+                <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube">
+                <span>HewiMine</span>
+            </a>
+            <p>HewiSite © 2025</p>
+            <p class="warning">Мы не несем ответственность за ваш ПК</p>
+        </footer>
+    </div>
 
-    navButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Удаляем активные классы
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            sections.forEach(section => section.classList.remove('active-section'));
-            
-            // Добавляем активные классы
-            this.classList.add('active');
-            const targetSection = document.getElementById(this.dataset.target);
-            targetSection.classList.add('active-section');
-        });
-    });
-});// Инициализация частиц
-document.addEventListener('DOMContentLoaded', function() {
-    particlesJS("particles-js", {
-        particles: {
-            number: { 
-                value: 100, 
-                density: { 
-                    enable: true, 
-                    value_area: 800 
-                } 
-            },
-            color: { 
-                value: "#d10000" 
-            },
-            shape: { 
-                type: "circle" 
-            },
-            opacity: { 
-                value: 0.5, 
-                random: true 
-            },
-            size: { 
-                value: 3, 
-                random: true 
-            },
-            line_linked: { 
-                enable: true, 
-                distance: 150, 
-                color: "#d10000", 
-                opacity: 0.4, 
-                width: 1 
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: true,
-                out_mode: "out"
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { 
-                    enable: true, 
-                    mode: "repulse" 
-                },
-                onclick: { 
-                    enable: true, 
-                    mode: "push" 
-                }
-            }
-        }
-    });
-
-    // Переключение разделов
-    const navButtons = document.querySelectorAll('.nav-btn');
-    const sections = document.querySelectorAll('.content-section');
-
-    navButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Удаляем активные классы
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            sections.forEach(section => section.classList.remove('active-section'));
-            
-            // Добавляем активные классы
-            this.classList.add('active');
-            const targetSection = document.getElementById(this.dataset.target);
-            targetSection.classList.add('active-section');
-        });
-    });
-});
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
