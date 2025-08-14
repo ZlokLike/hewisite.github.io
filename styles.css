@@ -42,31 +42,44 @@ header {
     text-shadow: 0 0 15px rgba(200, 0, 0, 0.8);
 }
 
-.logo-hewi {
+.logo span:first-child {
     color: #d10000;
     font-weight: 700;
 }
 
-.logo-site {
+.logo span:last-child {
     color: #d0d0d0;
     font-weight: 400;
 }
 
-.tagline {
+header p {
     color: #a0a0a0;
     font-size: 1.3rem;
     letter-spacing: 1.5px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.cheats-list {
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #d10000;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(200, 0, 0, 0.5);
+}
+
+section > div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
 }
 
-.cheat-card {
+section > div > div {
     background: rgba(30, 30, 30, 0.8);
     border: 1px solid #6d0000;
     border-radius: 10px;
@@ -81,22 +94,22 @@ header {
     min-height: 150px;
 }
 
-.cheat-card:hover {
+section > div > div:hover {
     transform: translateY(-7px);
     border-color: #d10000;
     box-shadow: 0 10px 30px rgba(200, 0, 0, 0.6);
 }
 
-.cheat-card h2 {
+h3 {
     color: #e0e0e0;
-    font-size: 1.6rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 25px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
     text-align: center;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Orbitron', sans-serif;
 }
 
-.download-btn {
+a {
     display: inline-block;
     background: linear-gradient(to right, #d10000, #a00000);
     color: #ffffff;
@@ -116,7 +129,7 @@ header {
     box-shadow: 0 4px 10px rgba(200, 0, 0, 0.3);
 }
 
-.download-btn:hover {
+a:hover {
     background: linear-gradient(to right, #a00000, #d10000);
     box-shadow: 0 0 20px rgba(200, 0, 0, 0.7);
     transform: scale(1.02);
@@ -134,7 +147,7 @@ footer {
     gap: 10px;
 }
 
-.youtube-link {
+footer a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -147,19 +160,20 @@ footer {
     background: rgba(30, 30, 30, 0.7);
     border: 1px solid #6d0000;
     margin-bottom: 15px;
+    width: auto;
 }
 
-.youtube-link:hover {
+footer a:hover {
     background: rgba(50, 50, 50, 0.7);
     transform: translateY(-2px);
 }
 
-.youtube-link img {
+footer img {
     width: 24px;
     height: 24px;
 }
 
-.disclaimer {
+footer p:last-child {
     font-size: 0.85rem;
     color: #ff3a3a;
     text-shadow: 0 0 3px rgba(255, 0, 0, 0.3);
@@ -171,11 +185,15 @@ footer {
         font-size: 2.5rem;
     }
     
-    .cheats-list {
+    section > div {
         grid-template-columns: 1fr;
     }
     
-    .tagline {
+    header p {
         font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
     }
 }
