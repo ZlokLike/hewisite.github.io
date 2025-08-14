@@ -42,28 +42,28 @@ header {
     text-shadow: 0 0 15px rgba(200, 0, 0, 0.8);
 }
 
-.logo span:first-child {
+.logo-hewi {
     color: #d10000;
     font-weight: 700;
 }
 
-.logo span:last-child {
+.logo-site {
     color: #d0d0d0;
     font-weight: 400;
 }
 
-header p {
+.tagline {
     color: #a0a0a0;
     font-size: 1.3rem;
     letter-spacing: 1.5px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-section {
+.section {
     margin-bottom: 50px;
 }
 
-h2 {
+.section-title {
     color: #d10000;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -72,14 +72,14 @@ h2 {
     text-shadow: 0 0 10px rgba(200, 0, 0, 0.5);
 }
 
-section > div {
+.items-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
 }
 
-section > div > div {
+.item-card {
     background: rgba(30, 30, 30, 0.8);
     border: 1px solid #6d0000;
     border-radius: 10px;
@@ -94,13 +94,13 @@ section > div > div {
     min-height: 150px;
 }
 
-section > div > div:hover {
+.item-card:hover {
     transform: translateY(-7px);
     border-color: #d10000;
     box-shadow: 0 10px 30px rgba(200, 0, 0, 0.6);
 }
 
-h3 {
+.item-card h3 {
     color: #e0e0e0;
     font-size: 1.4rem;
     margin-bottom: 20px;
@@ -109,7 +109,7 @@ h3 {
     font-family: 'Orbitron', sans-serif;
 }
 
-a {
+.download-btn {
     display: inline-block;
     background: linear-gradient(to right, #d10000, #a00000);
     color: #ffffff;
@@ -129,7 +129,7 @@ a {
     box-shadow: 0 4px 10px rgba(200, 0, 0, 0.3);
 }
 
-a:hover {
+.download-btn:hover {
     background: linear-gradient(to right, #a00000, #d10000);
     box-shadow: 0 0 20px rgba(200, 0, 0, 0.7);
     transform: scale(1.02);
@@ -147,7 +147,7 @@ footer {
     gap: 10px;
 }
 
-footer a {
+.youtube-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -160,20 +160,19 @@ footer a {
     background: rgba(30, 30, 30, 0.7);
     border: 1px solid #6d0000;
     margin-bottom: 15px;
-    width: auto;
 }
 
-footer a:hover {
+.youtube-link:hover {
     background: rgba(50, 50, 50, 0.7);
     transform: translateY(-2px);
 }
 
-footer img {
+.youtube-link img {
     width: 24px;
     height: 24px;
 }
 
-footer p:last-child {
+.disclaimer {
     font-size: 0.85rem;
     color: #ff3a3a;
     text-shadow: 0 0 3px rgba(255, 0, 0, 0.3);
@@ -185,15 +184,15 @@ footer p:last-child {
         font-size: 2.5rem;
     }
     
-    section > div {
+    .items-list {
         grid-template-columns: 1fr;
     }
     
-    header p {
+    .tagline {
         font-size: 1.1rem;
     }
     
-    h2 {
+    .section-title {
         font-size: 1.7rem;
     }
 }
