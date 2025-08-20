@@ -1,14 +1,14 @@
 particlesJS("particles-js", {
     particles: {
         number: {
-            value: 120,
+            value: 100,
             density: {
                 enable: true,
-                value_area: 1000
+                value_area: 800
             }
         },
         color: {
-            value: ["#00e5ff", "#0077b6", "#80deea"]
+            value: "#ff0000"
         },
         shape: {
             type: "circle",
@@ -18,44 +18,40 @@ particlesJS("particles-js", {
             }
         },
         opacity: {
-            value: 0.8,
+            value: 0.7,
             random: true,
             anim: {
                 enable: true,
-                speed: 1.5,
-                opacity_min: 0.2,
+                speed: 1,
+                opacity_min: 0.1,
                 sync: false
             }
         },
         size: {
-            value: 3,
+            value: 4,
             random: true,
             anim: {
                 enable: true,
-                speed: 5,
-                size_min: 0.5,
+                speed: 4,
+                size_min: 0.3,
                 sync: false
             }
         },
         line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#00b7eb",
-            opacity: 0.4,
-            width: 1
+            enable: false
         },
         move: {
             enable: true,
-            speed: 3,
-            direction: "none",
+            speed: 2,
+            direction: "bottom",
             random: true,
             straight: false,
             out_mode: "out",
             bounce: false,
             attract: {
                 enable: true,
-                rotateX: 800,
-                rotateY: 1600
+                rotateX: 600,
+                rotateY: 1200
             }
         }
     },
@@ -64,7 +60,7 @@ particlesJS("particles-js", {
         events: {
             onhover: {
                 enable: true,
-                mode: "grab"
+                mode: "bubble"
             },
             onclick: {
                 enable: true,
@@ -73,14 +69,15 @@ particlesJS("particles-js", {
             resize: true
         },
         modes: {
-            grab: {
-                distance: 200,
-                line_linked: {
-                    opacity: 0.6
-                }
+            bubble: {
+                distance: 100,
+                size: 8,
+                duration: 2,
+                opacity: 0.8,
+                speed: 3
             },
             push: {
-                particles_nb: 3
+                particles_nb: 4
             }
         }
     },
