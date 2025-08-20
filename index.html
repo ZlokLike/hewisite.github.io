@@ -1,128 +1,153 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HewiSite | Лучшие кряки читов</title>
+    <title>HewiSite</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Neon&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
-    
     <div class="container">
         <header>
-            <div class="logo">
-                <span class="logo-hewi">Hewi</span><span class="logo-site">Site</span>
-            </div>
+            <h1 class="logo"><span class="logo-hewi">Hewi</span><span class="logo-site">Site</span></h1>
             <p class="tagline">Лучшие кряки читов</p>
         </header>
-        
-        <main>
+
+        <section class="cheats-section">
+            <h2 class="section-title">Из видео</h2>
+            <div class="cheats-list">
+                <div class="cheat-card">
+                    <h2>Celestial</h2>
+                    <a href="#" class="download-btn">Скачать</a>
+                </div>
+                <div class="cheat-card">
+                    <h2>NightDLC</h2>
+                    <a href="#" class="download-btn">Скачать</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheats-section">
+            <h2 class="section-title">Другие читы</h2>
             <div class="cheats-list">
                 <div class="cheat-card">
                     <h2>Nix Project</h2>
-                    <a href="https://go.linkify.ru/2A7Q" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-                
                 <div class="cheat-card">
                     <h2>Venus Free</h2>
-                    <a href="https://go.linkify.ru/2A7M" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-                
-                <div class="cheat-card">
-                    <h2>Celestial</h2>
-                    <a href="https://go.linkify.ru/2A7K" class="download-btn">Скачать</a>
-                </div>
-                
                 <div class="cheat-card">
                     <h2>Minced 1.16.5</h2>
-                    <a href="https://go.linkify.ru/2A7P" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Minced 1.20.1</h2>
-                    <a href="https://go.linkify.ru/2APx" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-                
                 <div class="cheat-card">
                     <h2>Haruka DLC</h2>
-                    <a href="https://go.linkify.ru/2A7N" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-                
                 <div class="cheat-card">
                     <h2>Catlavan Client</h2>
-                    <a href="https://go.linkify.ru/2AFO" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-                
                 <div class="cheat-card">
                     <h2>Expensive Upgrade</h2>
-                    <a href="https://go.linkify.ru/2A5O" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Nursultan Nextgen</h2>
-                    <a href="https://go.linkify.ru/2A9k" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>WexSide Client</h2>
-                    <a href="https://go.linkify.ru/2A9j" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>ThunderHack Recode 1.21</h2>
-                    <a href="https://go.linkify.ru/2A9q" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>NewCode Client</h2>
-                    <a href="https://go.linkify.ru/2A9u" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Excellent Upgrade</h2>
-                    <a href="https://go.linkify.ru/2A9y" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Rockstar Client</h2>
-                    <a href="https://go.linkify.ru/2APz" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Dimasik Client</h2>
-                    <a href="https://go.linkify.ru/2AQ2" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
-                <div class="cheat-card">
-                    <h2>NightDLC</h2>
-                    <a href="https://go.linkify.ru/2AQ3" class="download-btn">Скачать</a>
-                </div>
-
                 <div class="cheat-card">
                     <h2>Arbuz Client</h2>
-                    <a href="https://go.linkify.ru/2AQ4" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
-
                 <div class="cheat-card">
                     <h2>Verist Reborn</h2>
-                    <a href="https://go.linkify.ru/2ADa" class="download-btn">Скачать</a>
+                    <a href="#" class="download-btn">Скачать</a>
                 </div>
             </div>
-        </main>
-        
+        </section>
+
         <footer>
-            <a href="https://www.youtube.com/@HewiMine" class="youtube-link" target="_blank">
-                <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube">
-                <span>HewiMine</span>
+            <a href="https://www.youtube.com/@HewiMine" class="youtube-link">
+                <img src="https://img.icons8.com/color/24/000000/youtube-play.png" alt="YouTube">
+                HewiMine
             </a>
             <p>HewiSite © 2025</p>
             <p class="disclaimer">Мы не несем ответственность за ваш ПК</p>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
